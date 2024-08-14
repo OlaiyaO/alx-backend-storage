@@ -66,7 +66,7 @@ class Cache:
         self._redis.set(rkey, data)
         return rkey
 
-    def get(self, key: str, 
+    def get(self, key: str,
             fn: Optional[Callable] = None) -> Union[str, bytes, int, float]:
         """Retrieve data from Redis, with optional type conversion."""
         value = self._redis.get(key)

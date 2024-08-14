@@ -23,7 +23,7 @@ def count_url_access(method):
 
         store.incr(count_key)
         store.set(cached_key, html)
-        store.expire(cached_key, 10)  # Cache expires after 10 seconds
+        store.expire(cached_key, 10)
         return html
     return wrapper
 
